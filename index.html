@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.8, maximum-scale=1.8, manimum-scale=1.8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        Послуги поштового відправлення
+    </title>
+</head>
+
+<body style="background-image: url(https://papik.pro/uploads/posts/2021-09/1631818969_23-papik-pro-p-krasivii-fon-risunok-24.jpg)">
+    <style>
+        #clock {
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            color: #0ae7f7;
+        }
+        
+        h1 {
+            text-align: center;
+            text-decoration: solid;
+        }
+    </style>
+    <header>
+        <div id='clock'>
+            <canvas id='Canvas'></canvas>
+        </div>
+        <h1>Послуги поштового відправлення</h1>
+        <h2><i>Про себе</i></h2>
+    </header>
+    <form name="Postal">
+        <div class="Names"></div>
+        <span><strong>Впишіть ваше ім'я: </strong></span> <input type="text" placeholder="Впишіть ім'я..." name="name" value=""><br>
+        </div><br>
+        <div class="Firstname">
+            <label for="firstname"><strong>Впишіть ваше прізвище:</strong></label>
+            <input id="firstname" type="text" placeholder="Впишіть прізвище..." name="firstname" value="">
+        </div><br>
+        <div class="Patronymic">
+            <label for="patronymic"><strong>Впишіть як вас побатькові:</strong></label>
+            <input id="patronymic" type="text" placeholder="Впишіть як вас побатькові..." name="patronymic" value="">
+        </div><br>
+        <script type="text/javascript">
+        </script>
+        </p>
+        <div class="Gender">
+            <label for="gender"><strong>Ваша стать:</strong></label>
+            <input id="gender" type="radio" name="gender" value="Мужской"><strong><em>Мужской</em></strong>
+            <input id="gender" type="radio" name="gender" value="Женксий"><strong><em>Женксий</em></strong>
+        </div><br>
+
+        <div class="Weight">
+            <label for="weight"><strong>Укажіть вагу(кг):</strong></label>
+            <input id="weight" type="radio" name="weight" value="до 1"><strong><em>до 1(50 грн)</em></strong>
+            <input id="weight" type="radio" name="weight" value="Від 1 до 5"><strong><em>Від 1 до 5(70 грн)</em></strong>
+            <input id="weight" type="radio" name="weight" value="Від 5 до 10"><strong><em>Від 5 до 10(100 грн)</em></strong>
+            <input id="weight" type="radio" name="weight" value="Вище 10-ти"><strong><em>Вище 10-ти(200 грн)</em></strong>
+        </div>
+        <div class="delivery_service_in_Ukraine">
+            <p><strong>Виберіть службу доставки в Україні:</strong></p>
+            <select multiple name="delivery_service">
+                <option value="Нова Пошта">Нова Пошта(140 грн)</option>
+                <option value="Укрпошта">Укрпошта(140 грн)</option>
+                <option value="Інтайм">Інтайм(60 грн)</option>
+                <option value="Делівері">Делівері(60 грн)</option>
+                <option value="Міст Експрес">Міст Експрес(60 грн)</option>
+            </select>
+        </div><br>
+        <p><select name="delivery_method">
+            <option disabled selected="selected">Оберіть cпосіб доставки:</option>
+            <option  value="Кур'єром"><span>Кур'єром(70 грн)</span></option>
+            <option  value="У відділення" ><span>У відділення</span></option>      
+        </select></p>
+        <div class="Payment_method">
+            <label for="Payment_method"><strong>Спосіб оплати:</strong></label>
+            <input type="checkbox" id="Payment_method" name="Payment_method" value="Накладний платіж"><strong><em>Накладний платіж(тільки після отримання)</em></strong>
+            <input type="checkbox" id="Payment_methods" name="Payment_methods" value="Оплата картою"><strong><em>Оплата картаю(+7 грн)</em></strong>
+        </div><br>
+        <label for="Stickers">Бажаєте наліпки від фірми(5 грн)?</label>
+        <input type="checkbox" id="stickers" name="stickers" value="так, бажаю">так, бажаю<br><br>
+        <div class="Response">
+            <label for="response"><strong>Залишіть відгук про наш сайт:</strong></label>
+            <p><textarea id="response" cols="40" rows="10" placeholder="Пишу відгук..."></textarea></p>
+        </div><br>
+        <input type="submit" value="Отправить" onclick="postal_services()">
+        <input type="reset" value="Сброс">
+
+    </form>
+    <script src="script.js"></script>
+</body>
+
+</html>
